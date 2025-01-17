@@ -23,7 +23,8 @@
     <script src="https://unpkg.com/feather-icons"></script>
 
     <!--my style-->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="responsive.css"/>
 
     <!--font awesom-->
     <script src="https://kit.fontawesome.com/7993c55251.js" crossorigin="anonymous"></script>
@@ -32,11 +33,11 @@
 </head>
 
 <body>
-    <!--navigation start-->
+    <!--navbar start-->
     <nav class="navigation">
         <a href="#" class="firstname">Fia<span>cahya.</span></a>
 
-        <div class="production">
+        <div class="production" id="navbar">
             <a href="#home">Beranda</a>
             <a href="index-halaman2.html">Produk</a>
             <a href="#about">Tentang Kami</a>
@@ -61,7 +62,7 @@
     <!--home section start-->
     <div class="home" id="home">
         <a href="home"></a>
-        <main class="content">
+        <main class="overlay">
             <h1>Berbagai macam kue lezat</h1>
             <p>Kami memiliki banyak variasi yang sesuai dengan selera anda</p>
             <a href="index-halaman2.html" class="cta">Lihat produk</a>
@@ -69,25 +70,22 @@
     </div>
     <!--home section end-->
 
-    <!--all produk-->
-
-    <section id="all-product">
-        <div class="all-product-container">
-            <div class="text">
-                <h2>- All<span> Produk -</span></h2>
-                <p>Jelajahi Chiffon yang halus, Pastry yang kaya rasa, Cake yang memukau, dan Donat yang
-                    sempurna—koleksi kami untuk setiap selera dan momen<br>
-                    Rasakan kebahagiaan dalam setiap suapan dengan koleksi roti dan kue kami yang lezat di Toko Kami.
-                    <br><br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nam nihil unde dolore dicta iure
-                    corporis fugit alias, sit voluptatum deleniti nulla culpa, placeat totam voluptates vero repellendus
-                    natus numquam?
-                </p>
-                <a href="#catalog-product" class="cta-all-product">Katalog produk</a>
-            </div>
+    <!--card info start-->
+    <div class="container-card">
+        <div class="card-card1">
+            <h3>Kolom 1</h3>
         </div>
-    </section>
-
+        <div class="card2">
+            <img src="img/33.jpg" alt="">
+        </div>
+        <div class="card1">
+            <img src="img/33.jpg" alt="">
+        </div>
+        <div class="card-card2">
+            <h3>Kolom 4</h3>
+        </div>
+    </div>
+    <!--card info end-->
 
     <!--katalog produk start-->
     <section id="catalog-product">
@@ -131,15 +129,6 @@
                     dolorem vel voluptate fugiat ab.</p>
                 <a href="index-halaman2.html" class="cta-product-fia">Lihat produk</a>
             </div>
-        </div>
-    </section>
-
-
-    <!--daftar menu-->
-    <section class="list-menu">
-        <h2>- Daftar<span> Menu -</span></h2>
-        <div class="image-menu">
-            <img src="img/daftar-menu.jpg" alt="">
         </div>
     </section>
 
