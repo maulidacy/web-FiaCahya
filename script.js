@@ -5,7 +5,6 @@ document.querySelector('#menu').onclick = () => {
     production.classList.toggle('active');
 };
 
-
 //klik di luar sidebar untu menghilangkan navigation
 const menu = document.querySelector('#menu');
 
@@ -16,19 +15,20 @@ document.addEventListener('click', function (e) {
 
 });
 
-//slide show
-const slides = document.querySelectorAll('.home img');
-let currentSlide = 0;
+//slideshow
+let slideIndex = 0;
+let slides = document.getElementsByClassName("slide");
+showSlides();
 
-function showSlide() {
-    slides.forEach((slide, index) => {
-        slide.style.display = index === currentSlide ? 'block' : 'none';
-    });
-    currentSlide = (currentSlide + 1) % slides.length;
-    setTimeout(showSlide, 5000); // Ganti slide setiap 5 detik
+function showSlides() {
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+    }
+    slideIndex++;
+    if (slideIndex >= slides.length) {slideIndex = 0}    
+    slides[slideIndex].classList.add("active");
+    setTimeout(showSlides, 5000); 
 }
-showSlide();
-
 
 //search engine
 let searchForm = document.querySelector('.search-form');
@@ -64,14 +64,6 @@ var swiper = new Swiper('.swiper', {
     },
   },
 });
-
-
-
-
-
-
-
-
 
 
 //catalog product

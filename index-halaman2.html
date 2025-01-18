@@ -18,9 +18,12 @@
     <!--feather icons-->
     <script src="https://unpkg.com/feather-icons"></script>
 
+    <!--aos animation-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!--my style-->
-    <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="style-halaman2.css"/>
+    <link rel="stylesheet" href="media_query.css" />
 
     <!--font awesom-->
     <script src="https://kit.fontawesome.com/7993c55251.js" crossorigin="anonymous"></script>
@@ -382,6 +385,15 @@
     </script>
 
     <!--my javascript-->
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
+
+    <!--js aos-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Durasi animasi
+            once: false, // Animasi hanya sekali
+        });
+    </script>
 </body>
 </html>

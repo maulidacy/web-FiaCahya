@@ -22,9 +22,12 @@
     <!--feather icons-->
     <script src="https://unpkg.com/feather-icons"></script>
 
+    <!--aos animation-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!--my style-->
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="media_query.css" />
 
     <!--font awesom-->
     <script src="https://kit.fontawesome.com/7993c55251.js" crossorigin="anonymous"></script>
@@ -60,36 +63,43 @@
     <!--navbar end-->
 
     <!--home section start-->
-    <div class="home" id="home">
-        <a href="home"></a>
-        <main class="overlay">
-            <h1>Berbagai macam kue lezat</h1>
-            <p>Kami memiliki banyak variasi yang sesuai dengan selera anda</p>
-            <a href="index-halaman2.html" class="cta">Lihat produk</a>
+    <section>
+        <main class="home" id="home">
+            <div class="slideshow-container">
+                <div class="slide slide1 active"></div>
+                <div class="slide slide2"></div>
+                <div class="slide slide3"></div>
+                <div class="overlay">
+                    <h1>Berbagai macam kue lezat</h1>
+                    <p>Kami memiliki banyak variasi yang sesuai dengan selera anda</p>
+                    <a href="index-halaman2.html" class="cta">Lihat produk</a>
+                </div>
+            </div>
         </main>
-    </div>
+    </section>
     <!--home section end-->
 
     <!--card info start-->
-    <div class="container-card">
-        <div class="card-card1">
-            <h3>Kolom 1</h3>
+    <section>
+        <div class="container-card">
+            <div class="card-card1">
+                <h3>Kolom 1</h3>
+            </div>
+            <div class="card2">
+                <img src="img/33.jpg" alt="">
+            </div>
+            <div class="card1">
+                <img src="img/33.jpg" alt="">
+            </div>
+            <div class="card-card2">
+                <h3>Kolom 4</h3>
+            </div>
         </div>
-        <div class="card2">
-            <img src="img/33.jpg" alt="">
-        </div>
-        <div class="card1">
-            <img src="img/33.jpg" alt="">
-        </div>
-        <div class="card-card2">
-            <h3>Kolom 4</h3>
-        </div>
-    </div>
+    </section>
     <!--card info end-->
 
     <!--katalog produk start-->
     <section id="catalog-product">
-        <a href="catalog-product"></a>
         <div class="catalog-container">
             <h2>- Katalog<span> Product -</span></h2>
             <div class="swiper">
@@ -117,20 +127,20 @@
             </div>
         </div>
     </section>
+    <!--katalog produk end-->
 
-    <!--contact us-->
 
     <!--About-->
     <section id="about">
         <div class="container-about">
             <div class="about-text">
-                <h2>- Tentang<span> Kami -</span></h2>
+                <h2 data-aos="fade-down">- Tentang<span> Kami -</span></h2>
             </div>
             <div class="about-content">
                 <div class="about-img">
-                    <img src="img/aboutt.jpg" alt="FiaCahya Snack">
+                    <img src="img/aboutt.jpg" alt="FiaCahya Snack" data-aos="flip-left">
                 </div>
-                <div class="about-text-section">
+                <div class="about-text-section" data-aos="fade-up-left">
                     <h3>Selamat datang di FiaCahya Snack!</h3>
                     <p>Sejak tahun 2019, kami telah berdiri dan beroperasi sebagai toko kue basah yang berdedikasi untuk
                         menyajikan berbagai macam kue tradisional Indonesia dengan cita rasa otentik dan kualitas
@@ -160,92 +170,43 @@
                             nasional.</li>
                     </ul>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!--contact-->
+    <!--contact start-->
     <section class="contact" id="contact">
-        <div class="heading-contact">
-            <h2>- Kontak<span> Kami -</span></h2>
+        <div class="container-contact">
+            <h2 data-aos="fade-down">- Kontak<span> Kami -</span></h2>
             <div class="teks-about">
-                <p>Kami senang mendengar dari Anda! Jika Anda memiliki pertanyaan, ingin melakukan pemesanan khusus,
+                <p data-aos="fade-right">Kami senang mendengar dari Anda! Jika Anda memiliki pertanyaan, ingin melakukan
+                    pemesanan khusus,
                     atau hanya ingin berbagi pengalaman Anda, jangan ragu untuk menghubungi kami di bawah ini...</p>
-                <table>
-                    <thead>
-                        <tr>
-                            <td>
-                                <div class="contact-cards">
-                                    <div class="card">
-                                        <div class="icon maps"></div>
-                                        <i data-feather="map-pin"></i>
-                                        <h3>Alamat</h3>
-                                        <p>DS. Tungu RT12/RW02 Kec. Godong Kab. Grobogan</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="contact-cards">
-                                    <div class="card">
-                                        <div class="icon phone"></div>
-                                        <i data-feather="phone"></i>
-                                        <h3>Telepon</h3>
-                                        <p>0856-0135-3543</p>
-                                    </div>
-                                </div>
-                            </td>
-
-                            <td>
-                                <div class="contact-cards">
-                                    <div class="card">
-                                        <div class="icon email"></div>
-                                        <i data-feather="mail"></i>
-                                        <h3>Email</h3>
-                                        <p>fiacahyasnackk@gmail.com</p>
-                                    </div>
-                                </div>
-                            </td>
-            </div>
-            </tr>
-            </table>
-    </section>
-
-    <!--contact section-->
-    <section class="contact" id="contact">
-        <div class="heading-contact">
-            <h2>- Kontak<span> Kami -</span></h2>
-            <div class="teks-about">
-                <p>Kami senang mendengar dari Anda! Jika Anda memiliki pertanyaan, ingin melakukan pemesanan khusus,
-                    atau hanya ingin berbagi pengalaman Anda, jangan ragu untuk menghubungi kami di bawah ini...</p>
-                <div class="contact-cards">
-                    <div class="card">
+                <div class="container-box">
+                    <div class="box">
                         <div class="icon maps"></div>
                         <i data-feather="map-pin"></i>
                         <h3>Alamat</h3>
                         <p>DS. Tungu RT12/RW02 Kec. Godong Kab. Grobogan</p>
                     </div>
-
-                    <div class="card">
+                    <div class="box">
                         <div class="icon phone"></div>
                         <i data-feather="phone"></i>
                         <h3>Telepon</h3>
                         <p>0856-0135-3543</p>
                     </div>
-
-                    <div class="card">
+                    <div class="box">
                         <div class="icon email"></div>
                         <i data-feather="mail"></i>
                         <h3>Email</h3>
                         <p>fiacahyasnackk@gmail.com</p>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <!--contact end-->
 
-
-    <!--contact section-->
+    <!--maps start-->
     <section class="contact" id="contact">
         <div class="row">
             <iframe
@@ -254,6 +215,7 @@
         </div>
         </div>
     </section>
+     <!--maps end-->
 
 
     <!--logo
@@ -301,6 +263,15 @@
 
     <!--my javascript-->
     <script src="script.js"></script>
+
+    <!--js aos-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Durasi animasi
+            once: false, // Animasi hanya sekali
+        });
+    </script>
 </body>
 
 </html>

@@ -1,3 +1,170 @@
+:root {
+    --primary: #31241e;
+    --bg: #d0b8a8;
+    --second-bg-color: #282828;
+    --text-color: #fff;
+    --main-color: #181818;
+    --background: #f8ede3;
+    --sc: #8d493a;
+    --tc: #f8ede3;
+    --brown: #a44a0d;
+    --cream: #ddd4ce;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "poppins";
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.body {
+    font-family: "poppins";
+    background-color: var(--bg);
+    color: #31241e;
+    min-height: 5000px;
+}
+
+/*----navbar start----*/
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    border-bottom: 2px solid var(--background);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.firstname {
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--tc);
+}
+
+.firstname span {
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #c6aa97;
+}
+
+.production a {
+    content: "";
+    display: inline-block;
+    font-family: poppins;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+    color: var(--text-color);
+}
+
+.production a:hover {
+    color: var(--bg);
+}
+
+.navigation .production a::after {
+    content: "";
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--bg);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.production a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.production.active {
+    background-color: #00000098;
+}
+
+.production.active a {
+    color: var(--text-color);
+}
+
+.production.active a:hover {
+    color: var(--bg);
+}
+
+.navigation-extra {
+    display: block;
+    visibility: visible;
+    position: relative;
+    z-index: 1;
+}
+
+.navigation-extra a {
+    color: var(--text-color);
+    margin: 0 0.5rem;
+}
+
+.navigation-extra a:hover {
+    color: var(--bg);
+}
+
+#menu {
+    display: none;
+}
+
+/*navbar search form*/
+.search-form {
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    max-width: 50rem;
+    height: 4rem;
+    background-color: var(--text-color);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--bg);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s;
+}
+
+.search-form.active {
+    transform: scaleY(1);
+    right: 2rem;
+    transition: 0.4s linear;
+}
+
+.search-form input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    color: var(--main-color);
+    padding: 0 1.5rem;
+}
+
+.search-form label {
+    font-size: 2rem;
+    padding-right: 1.5rem;
+    color: var(--main-color);
+    cursor: pointer;
+    margin-top: 0.6rem;
+}
+
+.search-form label:hover {
+    color: #c3b091;
+}
+/*----navbar end----*/
+
 /*produk*/
 .heading {
     text-align: center;
@@ -5,31 +172,31 @@
     padding-top: 100px;
     padding-left: 5px;
     padding-right: 8px;
-  }
-  
-  .heading h2 {
+}
+
+.heading h2 {
     text-align: center;
     font-size: 23px;
     margin-bottom: 3rem;
     color: #31241e;
     font-family: poppins, sans-serif;
     text-transform: uppercase;
-  }
-  
-  .heading h2 span {
+}
+
+.heading h2 span {
     color: #c3b091;
     font-size: 23px;
-  }
-  
-  .product {
+}
+
+.product {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, auto));
     gap: 5px;
     margin-top: 2rem;
     background-color: var(--text-color);
-  }
-  
-  .product .box {
+}
+
+.product .box {
     position: relative;
     padding: 10px;
     display: flex;
@@ -38,17 +205,17 @@
     border-radius: 0.5rem;
     box-shadow: 0 4px 8px rgba(192, 192, 192, 0.8);
     font-size: 15px;
-  }
-  
-  .products-container {
+}
+
+.products-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, auto));
     gap: 5px;
     margin-top: 2rem;
     margin: 5px;
-  }
-  
-  .products-container .box {
+}
+
+.products-container .box {
     position: relative;
     padding: 10px;
     display: flex;
@@ -58,28 +225,28 @@
     box-shadow: 0 4px 8px rgba(192, 192, 192, 0.8);
     background-color: #3734342e;
     font-size: 12px;
-  }
-  
-  .products-container .img {
+}
+
+.products-container .img {
     width: 50px;
     height: 50px;
-  }
-  
-  .box h3 {
+}
+
+.box h3 {
     text-align: center;
-  }
-  
-  .price {
+}
+
+.price {
     text-align: center;
     color: var(--primary);
-  }
-  
-  .teks-about p {
+}
+
+.teks-about p {
     font-size: 15px;
     margin: 15px 30px;
-  }
-  
-  .cta-pesan {
+}
+
+.cta-pesan {
     display: inline-block;
     font-size: 10px;
     color: var(--primary);
@@ -90,10 +257,9 @@
     margin-top: 22px;
     border: 1px solid #31241e;
     cursor: pointer;
-  }
-  
-  .cta-pesan:hover {
+}
+
+.cta-pesan:hover {
     background-color: var(--bg);
     border-color: #aaa;
-  }
-  
+}

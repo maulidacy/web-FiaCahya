@@ -179,26 +179,8 @@ html {
   grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
   align-items: center;
   position: relative;
-  animation: slideshow 10s infinite alternate;
 }
 
-@keyframes slideshow {
-  0% {
-    background-image: url(img/11.png);
-  }
-
-  25% {
-    background-image: url(img/22.jpg);
-  }
-
-  50% {
-    background-image: url(img/33.jpg);
-  }
-
-  75% {
-    background-image: url(img/12.png);
-  }
-}
 
 .home::after {
   content: "";
@@ -212,6 +194,37 @@ html {
 
 #home {
   height: 100vh;
+}
+
+.slideshow-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background-size: cover;
+  background-position: center;
+}
+.active {
+  opacity: 1;
+}
+
+.slide1 {
+  background-image: url(img/33.jpg);
+}
+
+.slide2 {
+  background-image: url(img/11.png);
+}
+
+.slide3 {
+  background-image: url(img/22.jpg);
 }
 
 .overlay {
@@ -230,15 +243,20 @@ html {
   font-family: poppins, sans-serif;
 }
 
+.overlay h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  text-shadow: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+
 .overlay p {
   font-family: josefin slab;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 100;
   text-shadow: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
 }
 
 .cta {
-  display: inline-block;
   font-size: 1.1rem;
   color: var(--text-color);
   text-decoration: none;
@@ -246,8 +264,10 @@ html {
   border-radius: 0.5rem;
   padding: 0.6rem 1.5rem;
   margin-top: 8px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
 }
-
 /*----home end----*/
 
 /*----card info start----*/
@@ -259,7 +279,6 @@ html {
   gap: 0;
   width: 100%;
   height: 100vh;
-  max-width: 1200px;
 }
 
 .card1 img,
@@ -275,7 +294,6 @@ html {
 .card-card2 {
   background-color: var(--cream);
 }
-
 /*----card info end----*/
 
 /*----katalog product start-----*/
@@ -289,6 +307,7 @@ html {
   font-size: 24px;
   margin-bottom: 20px;
   text-align: center;
+  padding-top: 7rem;
 }
 
 .catalog-container span {
@@ -326,21 +345,16 @@ html {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* Mengubah warna bullet pagination */
 .swiper-pagination-bullet {
   background-color: var(--brown);
-  /* Warna bullet normal */
 }
 
 .swiper-pagination-bullet-active {
   background-color: var(--brown);
-  /* Warna bullet aktif */
 }
 
-/* Mengubah warna garis pagination */
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
   background-color: #000;
-  /* Warna garis pagination */
 }
 
 .swiper-button-prev,
@@ -360,103 +374,7 @@ html {
 .swiper-button-next {
   right: 20px;
 }
-
 /*----katalog product end-----*/
-
-/*produk fiachaya*/
-.product-fiacahya-container {
-  background-color: var(--text-color);
-}
-
-.product-fia {
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 10px;
-}
-
-.product-fia h2 {
-  font-size: 20px;
-  padding-bottom: 9px;
-}
-
-.product-fia h3 {
-  font-size: 15px;
-  padding-bottom: 5px;
-}
-
-.product-fia p {
-  font-size: 10px;
-  padding-right: 10px;
-}
-
-.cta-product-fia {
-  display: inline-block;
-  font-size: 1.1rem;
-  color: var(--text-color);
-  text-decoration: none;
-  background-color: var(--sc);
-  border-radius: 0.5rem;
-  padding: 0.6rem 1.5rem;
-  margin-top: 15px;
-  margin-bottom: 30px;
-}
-
-.kg-product1 img {
-  display: flex;
-  align-items: center;
-  max-width: 100%;
-  width: 100%;
-  padding: 40px;
-  background-color: var(--background);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.image-kg {
-  flex-basis: 50%;
-  max-width: 400px;
-  margin-right: 40px;
-  margin-left: 50px;
-}
-
-.image-kg img {
-  width: 100%;
-  height: auto;
-}
-
-.text {
-  flex-basis: 50%;
-}
-
-.image-kg h3 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.text span {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #9b8a6f;
-}
-
-.text h3 {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-.text p {
-  font-size: 13px;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-.text li {
-  font-size: 13px;
-  line-height: 1.5;
-  margin-bottom: 10px;
-  margin-left: 15px;
-}
 
 /*----about start----*/
 .container-about {
@@ -512,7 +430,7 @@ html {
   flex: 1;
   padding: 20px;
   background-color: var(--brown);
-  color: #333;
+  color: var(--cream);
 }
 
 .about-text-section h3 {
@@ -533,23 +451,60 @@ html {
   margin-bottom: 10px;
   margin-left: 15px;
 }
-
 /*----about end----*/
 
 
 /*----contact section start----*/
-.heading-contact {
-  background-color: var(--text-color);
+.container-contact {
+  background-color: var(--cream);
+  padding: 30px;
 }
 
-.heading-contact h2 {
+.container-contact h2 {
   font-size: 24px;
   text-align: center;
+  padding: 30px;
 }
 
-.heading-contact span {
+.container-contact span {
   color: var(--primary);
 }
+
+.container-contact p {
+  color: var(--primary);
+  font-size: 15px;
+}
+
+.container-box {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.box {
+  text-align: center;
+  border: 1px solid black;
+  width: 350px;
+  height: 150px;
+  margin: 10px;
+  font-size: 1.2em;
+  background-color: transparent;
+}
+
+.box h3 {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.box p {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 13px;
+}
+
+/*----contact section end----*/
 
 /*----maps end----*/
 .contact .row {
@@ -645,7 +600,7 @@ html {
     margin-right: auto;
 }*/
 
-/*footer*/
+/*----footer start----*/
 footer {
   background-color: var(--second-bg-color);
   text-align: center;
@@ -717,8 +672,9 @@ footer .credit a {
 .social a {
   color: #c3b091;
 }
+/*----footer end----*/
 
-/*maps*/
+/*----maps start----*/
 .row {
   flex-wrap: wrap;
 }
@@ -734,10 +690,5 @@ footer .credit a {
 .row iframe {
   padding-bottom: 0;
 }
+/*----maps end----*/
 
-/*mobile phone*/
-@media (max-width: 450px) {
-  html {
-    font-size: 55%;
-  }
-}

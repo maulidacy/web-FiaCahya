@@ -1,4 +1,22 @@
+/*mobile phone*/
+@media (max-width: 450px) {
+    html {
+      font-size: 55%;
+    }
+  }
+  
 @media (max-width: 768px) {
+    .overlay h1 {
+        font-size: 5vw;
+    }
+
+    .overlay p {
+        font-size: 4vw;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     .container-image {
         flex-direction: column;
         align-items: center;
@@ -22,6 +40,15 @@
 
       .about-content {
         flex-direction: column; /* Mengubah arah flex menjadi kolom pada layar kecil */
+    }
+
+    .container-box {
+        flex-direction: column; /* Mengatur kolom menjadi vertikal */
+        align-items: center; /* Memusatkan kolom */
+    }
+
+    .box {
+        width: 80%; /* Lebar kolom saat layar kecil */
     }
 }
 
