@@ -256,7 +256,38 @@ html {
   text-shadow: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
 }
 
-.cta {
+.cta-download {
+  display: inline-block;
+  font-size: 15px;
+  color: var(--text-color);
+  text-decoration: none;
+  background-color: transparent;
+  border-radius: 30px;
+  padding: 10px 15px;
+  margin-top: 30px;
+  position: relative;
+  z-index: 10;
+  border: solid var(--brown);
+  font-weight: 400;
+}
+
+.cta-download i {
+  color: var(--text-color);
+  padding: 10px;
+}
+
+.cta-download:hover {
+  background-color: var(--brown);
+  color: var(--text-color);
+  transition: 5s;
+}
+
+.cta-download:hover i,
+.cta-download:active i {
+  color: var(--text-color);
+}
+
+/*.cta {
   font-size: 1.1rem;
   color: var(--text-color);
   text-decoration: none;
@@ -267,7 +298,7 @@ html {
   position: relative;
   z-index: 1;
   cursor: pointer;
-}
+}*/
 /*----home end----*/
 
 /*----card info start----*/
